@@ -1,0 +1,243 @@
+@import "header";
+@import "fonts";
+
+.text-green {
+  color: $brand-green;
+}
+
+.text-green-darker {
+  color: $brand-green-darker;
+}
+
+.bg-green {
+  background-color: $brand-green-bg!important;
+}
+
+.bg-gray {
+  background-color: $brand-gray!important;
+}
+
+a {
+  @include custom-link($brand-green-darker);
+}
+
+hr {
+  border-top: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.brand-list {
+  padding-left: 0;
+
+  li {
+    position: relative;
+    list-style: none;
+    padding-left: 25px;
+    margin-bottom: 5px;
+
+    &:before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background-image: url('../imgs/list.png');
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      margin-top: 4px;
+      left: 0;
+
+      @media screen and (min-width: $screen-sm-min) {
+        top: 50%;
+        margin-top: -7px;
+      }
+    }
+
+    @media screen and (min-width: $screen-sm-min) {
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      font-weight: 400;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+.btn-orange {
+  @include button-variant(#fff, $brand-orange, #fff);
+  min-width: 200px;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 9px;
+  border-width: 3px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+}
+
+.center-block {
+  @include center-block();
+}
+
+.content-section {
+  padding: 60px 0 50px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+
+    b {
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      font-size: 31px;
+    }
+  }
+}
+
+.hidden-xs {
+  @media screen and (max-width: $screen-xs-max) {
+    display: none !important;
+  }
+}
+
+.visible-xs {
+  display: none !important;
+  @media screen and (max-width: $screen-xs-max) {
+    display: block !important;
+  }
+}
+
+.visible-sm {
+  display: none !important;
+  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    display: block !important;
+  }
+}
+
+.hidden-from-md {
+  @media screen and (min-width: $screen-sm-max + 1) {
+    display: none !important;
+  }
+}
+
+.visible-from-md {
+  display: none !important;
+  @media screen and (min-width: $screen-sm-max) {
+    display: block !important;
+  }
+}
+
+.valign-middle {
+  vertical-align: middle;
+}
+
+.title-underlined {
+  position: relative;
+  margin-bottom: 10px !important;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+  }
+}
+
+.list-inline {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: middle;
+  }
+}
+
+.counter {
+  color: $brand-green-bg;
+
+  .counter-value {
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  .counter-text {
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    font-weight: bold;
+    .counter-value {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .counter-text {
+      font-size: 15px;
+    }
+  }
+}
+
+.copyright {
+  color: #a1a1a1;
+  font-size: 16px;
+  margin-top: 60px;
+  border-top: 1px dashed #eee;
+  background-color: #fff;
+
+  h4 {
+    font-weight: normal;
+
+    img {
+      margin-left: 5px;
+    }
+  }
+}
+
+.green-link-with-bg {
+  color: $brand-green-darker;
+  background-color: rgba(50, 180, 166, 0.06);
+  padding: 5px 5px;
+  font-weight: 600;
+
+  @media screen and (max-width: $screen-xs-max) {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+}
+
+.no-m-top {
+  margin-top: 0 !important;
+}

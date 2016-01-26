@@ -1,0 +1,239 @@
+.autism {
+
+  .main-header {
+    background-color: #fff;
+  }
+
+
+  @media screen and (min-width: $screen-sm-min) {
+    .parallax-first {
+      position: relative;
+
+      .btn-orange {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        min-width: 240px;
+      }
+
+    }
+  }
+
+  .content-section {
+    background-color: #fff;
+  }
+
+  .jumbotron {
+    padding-top: 195px;
+    margin-bottom: 0;
+    background-image: url("../imgs/autism/autism-slider.png");
+    background-size: cover;
+    position: relative;
+
+    @media (max-width: $screen-xs-max){
+      padding-top: 200px !important;
+      background-position: center top -30px !important;
+      background-repeat: no-repeat;
+      .col-5{
+
+      }
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+      .col-5{
+        float: left !important;
+      }
+    }
+
+    //@media screen and (min-width: $screen-sm-min) {
+    //  //background-attachment: fixed;
+    //
+    //  position: fixed;
+    //  left: 0;
+    //  width: 100%;
+    //  top: 0;
+    //  z-index: -1;
+    //}
+
+    .jumbotron-overflow {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      opacity: 0;
+      transition: all .2s ease;
+    }
+
+    h1 {
+      font-size: 50px;
+
+      .text-green {
+        color: #5fd2c6;
+      }
+
+      @media screen and (min-width: $screen-md-max) {
+        font-size: 54px;
+      }
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 22px;
+      text-shadow: 2px -1px 1px rgba(0, 0, 0, 0.52);
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      padding-top: 160px;
+      padding-bottom: 50px;
+      min-height: 0;
+      background-position: left -450px center;
+
+      .btn-orange {
+        bottom: 0 !important;
+
+        &.is_stuck {
+          bottom: 0 !important;
+        }
+      }
+
+      h1 {
+        font-size: 35px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      h1, .bigger {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .content-section-title {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 38px;
+    margin: 0 0 10px;
+  }
+
+  .wandering-imgs {
+    @media screen and (min-width: $screen-xs-max + 1) {
+      margin-top: 100px;
+    }
+
+    li {
+      padding: 0 20px;
+
+      @media screen and (max-width: $screen-xs-max) {
+        padding: 0 10px;
+        width: 32%;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .transition-section {
+    position: relative;
+
+    &:before {
+      content: '';
+      border-bottom: 6px dashed rgba(50, 180, 166, 0.15);
+      width: 50%;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 55%;
+
+      @media screen and (max-width: $screen-xs-max) {
+        top: auto;
+        bottom: 12%;
+        width: 100%;
+      }
+    }
+  }
+
+  .transition-imgs {
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: $screen-xs-max) {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .riskfree-section {
+    h3 {
+      font-weight: normal;
+      font-size: 28px;
+      margin: 0;
+
+      b {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .solution {
+    position: relative;
+    padding-bottom: 100px;
+    background-image: url("../imgs/autism/solution-bg.png");
+    background-size: 350px;
+    background-position: bottom -4px right;
+    background-repeat: no-repeat;
+    border-bottom: 6px dashed rgba(50, 180, 166, 0.15);
+
+    .btn-orange {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      min-width: 240px;
+      z-index: 2;
+    }
+
+    .box-and-phone-img {
+      position: absolute;
+      bottom: -70px;
+      left: 56%;
+      width: 280px;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      background-size: 100%;
+      background-position: bottom center;
+    }
+
+    @media screen and (max-width: $screen-sm-max) {
+      padding-bottom: 300px;
+      //background-position: center bottom;
+    }
+
+    @media screen and (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
+      background-size: 450px;
+    }
+  }
+
+  p {
+    font-weight: 100;
+    line-height: 24px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+}

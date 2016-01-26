@@ -1,0 +1,17 @@
+{
+  "name": "as",
+  "version": "1.0.0",
+  "authors": [],
+  "description": "as",
+  "main": "index.html",
+  "keywords": [
+    "as"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jeet": "~6.1.2",
+    "normalize-css": "normalize.css#~3.0.3",
+    "sticky-kit": "~1.1.2",
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,22 @@
+@import '../bower_components/jeet/scss/jeet/index';
+@import "mixins";
+@import "variables";
+@import "grid";
+@import "common";
+@import "landing";
+@import "autism";
+@import "down";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  border-top: 3px solid $brand-green-bg;
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding-bottom: 55px;
+  }
+}
+

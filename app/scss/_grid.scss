@@ -1,0 +1,46 @@
+.container {
+  @include center(1070px);
+  padding: 0 $base-gutter;
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding: 0 $base-gutter + 10px;
+  }
+}
+
+.row {
+  margin-left: -$base-gutter;
+  margin-right: -$base-gutter;
+  @include cf;
+}
+
+.col {
+  padding: 0 $base-gutter;
+
+  @media screen and (max-width: $screen-sm-max) {
+    max-width: 500px;
+    @include center-block();
+  }
+
+}
+
+@for $i from 1 through $grid-columns  {
+  .col-#{$i} {
+    @extend .col;
+    @include col(1/($grid-columns/$i), $gutter: 0);
+  }
+}
+
+.col-third {
+  @extend .col;
+  @include col(1/3, $gutter: 0);
+
+  @media screen and (max-width: $screen-sm-max) {
+    @include stack();
+  }
+}
+
+.col-10, .col-5, .col-6 {
+  @media screen and (max-width: $screen-sm-max) {
+    @include stack();
+  }
+}

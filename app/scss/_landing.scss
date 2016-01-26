@@ -1,0 +1,187 @@
+.capabilities-section {
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .feature {
+    min-height: 110px;
+
+    h5 {
+      margin: 0;
+      color: $brand-green-darker;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 5px 0 10px;
+    }
+  }
+
+  .phone-img, .features-row {
+    @media screen and(max-width: $screen-sm-max) {
+      @include stack();
+
+      .col-5 {
+        @include stack();
+      }
+    }
+  }
+
+  .phone {
+    width: 285px;
+  }
+
+  .features-row {
+    font-weight: 300;
+
+    h5 {
+      font-weight: 600;
+    }
+  }
+}
+
+
+.monthly-section {
+  color: #fff;
+  padding-bottom: 50px;
+
+  .col-2 {
+    @media screen and(max-width: $screen-sm-max) {
+      @include stack();
+      margin-bottom: 50px;
+
+      img {
+        @include center-block();
+      }
+    }
+
+    img {
+      margin-bottom: 15px;
+    }
+
+    span {
+      width: 90%;
+      @include center-block();
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+}
+
+.whats-in {
+  a {
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  .col-4 {
+    @media screen and (max-width: $screen-sm-max) {
+      @include stack();
+    }
+  }
+}
+
+.reviews-section {
+  padding-bottom: 70px;
+
+  h3 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    .col-third {
+      margin-bottom: 70px;
+    }
+  }
+
+
+  p {
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 0;
+    font-weight: 300;
+  }
+
+  .start {
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    .col-third {
+      min-height: 350px;
+      position: relative;
+      padding-bottom: 45px;
+      margin-bottom: 50px;
+    }
+
+    .rating {
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+    }
+  }
+}
+
+.riskfree-section {
+  position: relative;
+  color: #fff;
+
+  .moneyback {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: -74px;
+    margin-left: -74px;
+  }
+
+  .btn-orange {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    padding: 50px 0;
+  }
+}
+
+.about-section {
+  color: #1c1c1c;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    .container {
+      max-width: 700px;
+    }
+    .col-1 {
+      width: 20%;
+
+      img {
+        @include center-block();
+        margin-bottom: 20px;
+      }
+    }
+    .col-9 {
+      width: 80%;
+      @include center-block()
+    }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    .col-9 {
+      @include stack()
+    }
+  }
+
+}
+
+.featured-section {
+  padding-bottom: 120px;
+}

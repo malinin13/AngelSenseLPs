@@ -1,0 +1,107 @@
+.main-header {
+  padding: 10px 0 5px;
+
+  .header-logo {
+    @media screen and (max-width: $screen-xs-max) {
+      max-width: 150px;
+    }
+  }
+}
+
+.jumbotron {
+  background-size: cover;
+  color: #fff;
+  position: relative;
+
+  .col-10 {
+    @media screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+      max-width: 700px;
+    }
+  }
+
+  h2, h1 {
+    margin: 0;
+    font-size: 47px;
+    text-shadow: 1px 1px 2px rgb(4, 33, 30);
+    font-weight: 400;
+
+    @media screen and (max-width: 479px) {
+      font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+
+    .bigger {
+      font-size: 35px;
+      line-height: 30px;
+    }
+  }
+
+  .brand-list {
+    font-weight: 300;
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgb(4, 33, 30);
+
+    @media screen and (min-width: $screen-sm-min) {
+      margin-top: 50px;
+      font-size: 23px;
+    }
+  }
+
+  .btn-orange {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 240px;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    padding-bottom: 100px;
+    background-image: url("../imgs/slide-mobile.png");
+    background-position: top center;
+    min-height: 450px;
+    padding-top: 100px;
+
+    .btn-orange {
+      bottom: 25px!important;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    min-height: 610px;
+    background-image: url("../imgs/slide.png");
+    background-position: center center;
+    padding-top: 115px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    padding-bottom: 100px;
+    background-image: url("../imgs/slide-tablet.png");
+    background-position: top center;
+    padding-top: 380px;
+  }
+
+
+}
+
+.mobile-cta {
+  &.is_stuck {
+    position: fixed!important;
+    top: auto!important;
+    bottom: 0!important;
+    width: 100%!important;
+    transform: none;
+    left: 0;
+    border-radius: 0;
+    border: none;
+    z-index: 100;
+  }
+}
