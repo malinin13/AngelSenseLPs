@@ -3,7 +3,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var tinypng = require('gulp-tinypng');
 var livereload = require('gulp-livereload');
 var connect = require('gulp-connect');
 
@@ -29,11 +28,7 @@ gulp.task('html', function () {
 		.pipe(connect.reload());
 });
 
-gulp.task('tinypng', function () {
-	gulp.src('dist/imgs/**/*.png')
-		.pipe(tinypng('3XGRJqvQEEQmEeWpUvry_-rtKgxPMk09'))
-		.pipe(gulp.dest('dist/imgs/compressed'));
-});
+
 
 gulp.task('watch', function () {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
